@@ -16,9 +16,24 @@ public class CensusAnalyserTest {
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             int numOfRecords = censusAnalyser.loadCsvData(INDIA_CENSUS_CSV_FILE_PATH);
             Assert.assertEquals(29, numOfRecords);
-            System.out.println("try block");
+            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
-            System.out.println("catch block");
+            System.out.println("CATCH BLOCK");
+        }
+    }
+    @Test
+    public void givenIndiaCensusData_WithWrongFile_ShouldThrowException() {
+        try {
+            final String WRONG_CSV_FILE_PATH = "D:\\fellowship\\Day8-Census-Analyser\\" +
+                    "src\\test\\resources";
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            ExpectedException exceptionRule = ExpectedException.none();
+            exceptionRule.expect(CensusAnalyserException.class);
+            censusAnalyser.loadCsvData(WRONG_CSV_FILE_PATH);
+            System.out.println("TRY BLOCK");
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+            System.out.println("CATCH BLOCK");
         }
     }
 
