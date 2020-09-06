@@ -7,12 +7,11 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 public class CensusAnalyserTest {
-    private static final String INDIA_CENSUS_CSV_FILE_PATH = "D:\\fellowship\\Day8-Census-Analyser\\" +
-            "src\\test\\resources\\IndiaStateCensusData.csv";
-
     @Test
     public void givenIndianCensusCSVFileReturnsCorrectRecords() {
         try {
+            final String INDIA_CENSUS_CSV_FILE_PATH = "D:\\fellowship\\Day8-Census-Analyser\\" +
+                    "src\\test\\resources\\IndiaStateCensusData.csv";
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             int numOfRecords = censusAnalyser.loadCsvData(INDIA_CENSUS_CSV_FILE_PATH);
             Assert.assertEquals(29, numOfRecords);
@@ -82,6 +81,20 @@ public class CensusAnalyserTest {
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
             System.out.println(e.type);
+            System.out.println("CATCH BLOCK");
+        }
+    }
+    @Test
+    public void givenIndianStateCodeCensusCSVFileReturnsCorrectRecords() {
+        try {
+            final String INDIA_CENSUS_CSV_FILE_PATH = "D:\\fellowship\\" +
+                    "Day7-Census-Analyser-\\src\\test\\resources\\IndiaStatesCodes.csv";
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            int numOfRecords = censusAnalyser.loadIndiaStateCode(INDIA_CENSUS_CSV_FILE_PATH);
+            System.out.println(numOfRecords);
+            Assert.assertEquals(37, numOfRecords);
+            System.out.println("TRY BLOCK");
+        } catch (CensusAnalyserException e) {
             System.out.println("CATCH BLOCK");
         }
     }
