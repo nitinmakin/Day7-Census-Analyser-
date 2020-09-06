@@ -1,4 +1,5 @@
 package com.bridgelabz.censusanalyser.model;
+
 import com.opencsv.bean.CsvBindByName;
 
 public class CSVStatesCode {
@@ -13,6 +14,7 @@ public class CSVStatesCode {
 
     @CsvBindByName(column = "TIN", required = true)
     public String TIN;
+
     @Override
     public String toString() {
         return "CSVStatesCode{" +
@@ -22,5 +24,4 @@ public class CSVStatesCode {
                 ", TIN='" + TIN + '\'' +
                 '}';
     }
-
 }

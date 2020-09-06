@@ -1,4 +1,5 @@
 package com.bridgelabz.censusanalyser.test;
+
 import com.bridgelabz.censusanalyser.exception.CensusAnalyserException;
 import com.bridgelabz.censusanalyser.model.CSVStateCensus;
 import com.bridgelabz.censusanalyser.service.StateCensusAnalyser;
@@ -147,7 +148,8 @@ public class CensusAnalyserTest {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
             System.out.println("CATCH BLOCK");
         }
-     }
+    }
+
     @Test
     public void givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException() {
         try {
