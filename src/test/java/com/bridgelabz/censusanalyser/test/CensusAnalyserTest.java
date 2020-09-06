@@ -113,6 +113,21 @@ public class CensusAnalyserTest {
             System.out.println("CATCH BLOCK");
         }
     }
+    @Test
+    public void givenIndiaStateCodeCensusData_WithWrongFileType_ShouldThrowException() {
+        try {
+            final String WRONG_CSV_FILE_TYPE = "D:\\fellowship\\Day8-Census-Analyser\\" +
+                    "src\\test\\resources\\StateCodeFileWithWrongType.txt";
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            ExpectedException exceptionRule = ExpectedException.none();
+            exceptionRule.expect(CensusAnalyserException.class);
+            censusAnalyser.loadIndiaStateCode(WRONG_CSV_FILE_TYPE);
+            System.out.println("try block");
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+            System.out.println("catch block");
+        }
+    }
 }
 
 
