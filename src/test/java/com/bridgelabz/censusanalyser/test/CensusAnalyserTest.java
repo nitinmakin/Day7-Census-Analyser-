@@ -21,6 +21,7 @@ public class CensusAnalyserTest {
             System.out.println("CATCH BLOCK");
         }
     }
+
     @Test
     public void givenIndiaCensusData_WithWrongFile_ShouldThrowException() {
         try {
@@ -36,6 +37,7 @@ public class CensusAnalyserTest {
             System.out.println("CATCH BLOCK");
         }
     }
+
     @Test
     public void givenIndiaCensusData_WithWrongFileType_ShouldThrowException() {
         try {
@@ -51,6 +53,7 @@ public class CensusAnalyserTest {
             System.out.println("catch block");
         }
     }
+
     @Test
     public void givenIndiaCensusData_WithWrongDelimiter_ShouldThrowException() {
         try {
@@ -63,10 +66,10 @@ public class CensusAnalyserTest {
             System.out.println("try block");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("catch block");
+            System.out.println("catch block ");
         }
+
     }
-
-
 }
+
 
