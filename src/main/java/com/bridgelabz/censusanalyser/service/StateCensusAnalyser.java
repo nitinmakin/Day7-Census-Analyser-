@@ -20,12 +20,12 @@ public class StateCensusAnalyser {
             CsvToBean<CSVStateCensus> csvToBean = csvToBeanBuilder.build();
             Iterator<CSVStateCensus> censusCSVIterator = csvToBean.iterator();
 
-            int numOfEntries = 0;
+            int numberOfEntries = 0;
             while (censusCSVIterator.hasNext()) {
-                numOfEntries++;
+                numberOfEntries++;
                 censusCSVIterator.next();
             }
-            return numOfEntries;
+            return numberOfEntries;
         } catch (Exception e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
@@ -40,12 +40,12 @@ public class StateCensusAnalyser {
             CsvToBean<CSVStatesCode> csvToBean = csvToBeanBuilder.build();
             Iterator<CSVStatesCode> censusCSVIterator = csvToBean.iterator();
 
-            int numOfEntries = 0;
+            int numberOfEntries = 0;
             while (censusCSVIterator.hasNext()) {
-                numOfEntries++;
+                numberOfEntries++;
                 censusCSVIterator.next();
             }
-            return numOfEntries;
+            return numberOfEntries;
         } catch (Exception e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
