@@ -68,7 +68,22 @@ public class CensusAnalyserTest {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
             System.out.println("catch block ");
         }
-
+    }
+    @Test
+    public void givenIndiaCensusData_WithWrongHeader_ShouldThrowException() {
+        try {
+            final String WRONG_CSV_HEADER = "D:\\fellowship\\Day8-Census-Analyser\\" +
+                    "src\\test\\resources\\CorrectCsvFileWithWrongCsvHeader.csv";
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            ExpectedException exceptionRule = ExpectedException.none();
+            exceptionRule.expect(CensusAnalyserException.class);
+            censusAnalyser.loadCsvData(WRONG_CSV_HEADER);
+            System.out.println("TRY BLOCK");
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+            System.out.println(e.type);
+            System.out.println("CATCH BLOCK");
+        }
     }
 }
 
