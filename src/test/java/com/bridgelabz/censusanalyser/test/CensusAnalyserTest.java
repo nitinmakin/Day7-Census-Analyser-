@@ -142,10 +142,26 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadIndiaStateCode(WRONG_CSV_DELIMITER_TYPE);
-            System.out.println("try block");
+            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("catch block ");
+            System.out.println("CATCH BLOCK");
+        }
+     }
+    @Test
+    public void givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException() {
+        try {
+            final String WRONG_CSV_HEADER = "D:\\fellowship\\Day8-Census-Analyser\\" +
+                    "src\\test\\resources\\StateCodeWithWrongHeader.csv";
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            ExpectedException exceptionRule = ExpectedException.none();
+            exceptionRule.expect(CensusAnalyserException.class);
+            censusAnalyser.loadIndiaStateCode(WRONG_CSV_HEADER);
+            System.out.println("TRY BLOCK");
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+            System.out.println(e.type);
+            System.out.println("CATCH BLOCK");
         }
     }
 }
