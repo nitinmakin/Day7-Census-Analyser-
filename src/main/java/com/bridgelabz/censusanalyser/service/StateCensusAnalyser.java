@@ -16,9 +16,7 @@ public class StateCensusAnalyser {
     public int loadCsvData(String csvFilePath) throws CensusAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             Iterator<CSVStateCensus> censusCSVIterator = this.getCSVFileIterator(reader, CSVStateCensus.class);
-            Iterable<CSVStateCensus> stateCensusIterable = () -> censusCSVIterator;
-            int numberOfEntries = (int) StreamSupport.stream(stateCensusIterable.spliterator(), false).count();
-            return numberOfEntries;
+            return this.getCount(censusCSVIterator);
         } catch (Exception e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
@@ -28,9 +26,7 @@ public class StateCensusAnalyser {
     public int loadIndiaStateCodeCsv(String csvFilePath) throws CensusAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             Iterator<CSVStatesCode> censusCSVIterator = this.getCSVFileIterator(reader, CSVStatesCode.class);
-            Iterable<CSVStatesCode> statesCodeIterable = () -> censusCSVIterator;
-            int numberOfEntries = (int) StreamSupport.stream(statesCodeIterable.spliterator(), false).count();
-            return numberOfEntries;
+            return getCount(censusCSVIterator);
         } catch (Exception e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
@@ -49,6 +45,11 @@ public class StateCensusAnalyser {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
         }
+    }
+    private <E>int getCount(Iterator<E> iterator){
+        Iterable<E> statesCodeIterable = () -> iterator;
+        int numberOfEntries = (int) StreamSupport.stream(statesCodeIterable.spliterator(), false).count();
+        return numberOfEntries;
 
     }
 }
