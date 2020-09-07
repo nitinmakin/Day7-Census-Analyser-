@@ -32,7 +32,11 @@ public class StateCensusAnalyser {
         }
     }
 
+<<<<<<< HEAD
     public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException {
+=======
+    public int loadIndiaStateCodeCsv(String csvFilePath) throws CensusAnalyserException {
+>>>>>>> UC2_Load_indian_states_code_info
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             CsvToBeanBuilder<CSVStatesCode> csvToBeanBuilder = new CsvToBeanBuilder<>(reader);
             csvToBeanBuilder.withType(CSVStatesCode.class);
