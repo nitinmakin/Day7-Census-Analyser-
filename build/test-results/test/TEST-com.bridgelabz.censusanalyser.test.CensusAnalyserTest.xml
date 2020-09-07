@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-06T22:32:27" hostname="DESKTOP-96O27FC" time="0.012">
+  <properties/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.012"/>
+  <system-out><![CDATA[CENSUS_FILE_PROBLEM
+CATCH BLOCK
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
