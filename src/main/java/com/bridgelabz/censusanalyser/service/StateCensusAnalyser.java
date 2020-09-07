@@ -3,9 +3,7 @@ package com.bridgelabz.censusanalyser.service;
 import com.bridgelabz.censusanalyser.exception.CensusAnalyserException;
 import com.bridgelabz.censusanalyser.model.CSVStateCensus;
 import com.bridgelabz.censusanalyser.model.CSVStatesCode;
-import com.bridgelabz.censusanalyser.utility.OpenCsvBuilder;
-import com.opencsv.bean.CsvToBean;
-import com.opencsv.bean.CsvToBeanBuilder;
+import com.bridgelabz.censusanalyser.exception.CsvBuilderException;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -20,13 +18,16 @@ public class StateCensusAnalyser {
          ICsvBuilder csvBuilder =   CsvBuilderFactory.createCsvBuilder();
             Iterator<CSVStateCensus> censusCSVIterator = csvBuilder.getCSVFileIterator(reader, CSVStateCensus.class);
             return this.getCount(censusCSVIterator);
-        } catch (Exception e) {
+        } catch (IOException e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+        } catch (CsvBuilderException e) {
+            throw new CensusAnalyserException(e.getMessage(),e.type.name());
         }
     }
 
-    public int loadIndiaStateCodeCsv(String csvFilePath) throws CensusAnalyserException {
+
+    public int loadIndiaStateCodeCsv(String csvFilePath) throws CensusAnalyserException{
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICsvBuilder csvBuilder = CsvBuilderFactory.createCsvBuilder();
             Iterator<CSVStatesCode> censusCSVIterator = csvBuilder.getCSVFileIterator(reader, CSVStatesCode.class);
@@ -34,7 +35,10 @@ public class StateCensusAnalyser {
         } catch (IOException e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+        } catch (CsvBuilderException e) {
+            throw new CensusAnalyserException(e.getMessage(), e.type.name());
         }
+
     }
 
     private <E> int getCount(Iterator<E> iterator) {
