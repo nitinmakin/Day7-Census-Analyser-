@@ -88,7 +88,7 @@ public class CensusAnalyserTest {
     }
 
     @Test
-    public void givenIndianStateCodeCensusCSVFileReturnsCorrectRecords() {
+    public void givenIndianStateCodeCensusCSVFileShouldReturnsCorrectRecords() {
         try {
             final String INDIA_CENSUS_CSV_FILE_PATH = "D:\\fellowship\\" +
                     "Day7-Census-Analyser-\\src\\test\\resources\\IndiaStatesCodes.csv";
