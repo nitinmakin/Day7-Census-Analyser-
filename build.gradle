@@ -13,4 +13,5 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile 'com.opencsv:opencsv:4.0'
     compile 'com.google.code.gson:gson:2.2.+'
+    compile(files("D:\\fellowship\\Day7-Census-Analyser-\\lib\\CSV Builder.jar"))
 }
