@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-09-08T19:29:23" hostname="DESKTOP-96O27FC" time="1.089">
+<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-09-08T19:39:01" hostname="DESKTOP-96O27FC" time="0.802">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.564"/>
-  <testcase name="givenIndiaCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.042"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.009"/>
+  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.453"/>
+  <testcase name="givenIndiaCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.028"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
   <testcase name="givenIndiaCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.002"/>
-  <testcase name="givenIndiaCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.008"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.0"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndiaCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.003"/>
   <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndianCensusData_WhenSortedOneState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.203"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndianStateCodeCensusCSVFileShouldReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.247"/>
+  <testcase name="givenIndianCensusData_WhenSortedOneState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.157"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.0"/>
+  <testcase name="givenIndianStateCodeCensusCSVFileShouldReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.149"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

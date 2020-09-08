@@ -32,19 +32,7 @@ public class StateCensusAnalyser {
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
         }
     }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException {
-=======
-=======
-
->>>>>>> UC2_Load_indian_states_code_info
-=======
->>>>>>> UC3_Sort_data_by_states
     public int loadIndiaStateCodeCsv(String csvFilePath) throws CensusAnalyserException {
->>>>>>> UC2_Load_indian_states_code_info
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICsvBuilder csvBuilder = CsvBuilderFactory.createCsvBuilder();
             Iterator<CSVStatesCode> censusCSVIterator = csvBuilder.getCSVFileIterator(reader, CSVStatesCode.class);
@@ -65,6 +53,17 @@ public class StateCensusAnalyser {
     }
 
     public String getStateSortedCensusData() throws CensusAnalyserException {
+        if(censusCSVList == null || censusCSVList.size() == 0){
+            throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+        }
+
+        Comparator<CSVStateCensus> censusComparator = Comparator.comparing(census -> census.state);
+        this.sort(censusComparator);
+        return new Gson().toJson(censusCSVList);
+
+    }
+
+    public String getStateCodeSortedCensusData() throws CensusAnalyserException {
         if(censusCSVList == null || censusCSVList.size() == 0){
             throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
