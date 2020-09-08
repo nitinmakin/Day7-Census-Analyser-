@@ -56,22 +56,18 @@ public class StateCensusAnalyser {
         if(censusCSVList == null || censusCSVList.size() == 0){
             throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
-
         Comparator<CSVStateCensus> censusComparator = Comparator.comparing(census -> census.state);
         this.sort(censusComparator);
         return new Gson().toJson(censusCSVList);
-
     }
 
-    public String getStateCodeSortedCensusData() throws CensusAnalyserException {
+    public String getStatePopulationSortedCensusData() throws CensusAnalyserException {
         if(censusCSVList == null || censusCSVList.size() == 0){
             throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
-
-        Comparator<CSVStateCensus> censusComparator = Comparator.comparing(census -> census.state);
+        Comparator<CSVStateCensus> censusComparator = Comparator.comparing(census -> census.population);
         this.sort(censusComparator);
         return new Gson().toJson(censusCSVList);
-
     }
 
     private void sort(Comparator<CSVStateCensus> censusComparator) {
