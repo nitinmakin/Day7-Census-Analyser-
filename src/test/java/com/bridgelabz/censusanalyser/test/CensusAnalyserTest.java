@@ -1,6 +1,6 @@
 package com.bridgelabz.censusanalyser.test;
+
 import com.bridgelabz.censusanalyser.exception.CensusAnalyserException;
-import com.bridgelabz.censusanalyser.model.CSVStateCensus;
 import com.bridgelabz.censusanalyser.service.StateCensusAnalyser;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,9 +15,8 @@ public class CensusAnalyserTest {
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             int numOfRecords = censusAnalyser.loadCsvData(INDIA_CENSUS_CSV_FILE_PATH);
             Assert.assertEquals(29, numOfRecords);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
-            System.out.println("CATCH BLOCK");
+           e.printStackTrace();
         }
     }
 
@@ -30,10 +29,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadCsvData(WRONG_CSV_FILE_PATH);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("CATCH BLOCK");
         }
     }
 
@@ -46,10 +43,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadCsvData(WRONG_CSV_FILE_TYPE);
-            System.out.println("try block");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("catch block");
         }
     }
 
@@ -62,10 +57,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadCsvData(WRONG_CSV_DELIMITER_TYPE);
-            System.out.println("try block");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("catch block ");
         }
     }
 
@@ -78,11 +71,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadCsvData(WRONG_CSV_HEADER);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println(e.type);
-            System.out.println("CATCH BLOCK");
         }
     }
 
@@ -93,11 +83,8 @@ public class CensusAnalyserTest {
                     "Day7-Census-Analyser-\\src\\test\\resources\\IndiaStatesCodes.csv";
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             int numOfRecords = censusAnalyser.loadIndiaStateCodeCsv(INDIA_CENSUS_CSV_FILE_PATH);
-            System.out.println(numOfRecords);
             Assert.assertEquals(37, numOfRecords);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
-            System.out.println("CATCH BLOCK");
         }
     }
 
@@ -110,10 +97,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadIndiaStateCodeCsv(WRONG_CSV_FILE_PATH);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("CATCH BLOCK");
         }
     }
 
@@ -126,10 +111,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadIndiaStateCodeCsv(WRONG_CSV_FILE_TYPE);
-            System.out.println("try block");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("catch block");
         }
     }
 
@@ -142,12 +125,11 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadIndiaStateCodeCsv(WRONG_CSV_DELIMITER_TYPE);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println("CATCH BLOCK");
         }
-     }
+    }
+
     @Test
     public void givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException() {
         try {
@@ -157,11 +139,8 @@ public class CensusAnalyserTest {
             ExpectedException exceptionRule = ExpectedException.none();
             exceptionRule.expect(CensusAnalyserException.class);
             censusAnalyser.loadIndiaStateCodeCsv(WRONG_CSV_HEADER);
-            System.out.println("TRY BLOCK");
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-            System.out.println(e.type);
-            System.out.println("CATCH BLOCK");
         }
     }
 }
