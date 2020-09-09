@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2020-09-08T20:25:02" hostname="DESKTOP-96O27FC" time="0.621">
+<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-09T19:37:34" hostname="DESKTOP-96O27FC" time="0.136">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.208"/>
-  <testcase name="givenIndiaCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.053"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.003"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnPopulation_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.117"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnStateArea_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.042"/>
-  <testcase name="givenIndiaCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.0"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.006"/>
-  <testcase name="givenIndiaCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.017"/>
-  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.0"/>
-  <testcase name="givenIndianCensusData_WhenSortedOneState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.041"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnPopulationDensity_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.024"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndianStateCodeCensusCSVFileShouldReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.103"/>
-  <system-out><![CDATA[IndiaCensusCSV{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
-IndiaCensusCSV{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
-IndiaCensusCSV{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='21000', DensityPerSqKm='50'}
-]]></system-out>
+  <testcase name="givenIndianCensusData_WhenSortedOnStateCode_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.136"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
