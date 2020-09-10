@@ -10,10 +10,10 @@ public class CSVStatesCode {
     public String StateCode;
 
     @CsvBindByName(column = "SrNo", required = true)
-    public String SrNo;
+    public long SrNo;
 
     @CsvBindByName(column = "TIN", required = true)
-    public String TIN;
+    public long TIN;
 
 
     @Override
