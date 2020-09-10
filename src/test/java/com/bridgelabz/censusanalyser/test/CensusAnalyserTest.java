@@ -14,6 +14,8 @@ public class CensusAnalyserTest {
             "src\\test\\resources\\IndiaStateCensusData.csv";
     private final String INDIA_CENSUS_CSV_FILE_PATH_FOR_STATE_CODE = "D:\\fellowship\\" +
             "Day7-Census-Analyser-\\src\\test\\resources\\IndiaStatesCodes.csv";
+    private final String US_CENSUS_DATA_PATH = "D:\\fellowship\\Day7-Census-Analyser-\\" +
+            "src\\test\\resources\\USCensusData.csv";
 
     @Test
     public void givenIndianCensusCSVFileReturnsCorrectRecords() {
@@ -213,6 +215,16 @@ public class CensusAnalyserTest {
             System.out.println(censusCsv[0]);
             Assert.assertEquals("Rajasthan", censusCsv[0].state);
         } catch (CensusAnalyserException e) {
+        }
+    }
+    @Test
+    public void givenUSCensusCSVFileReturnsCorrectRecords() {
+        try {
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            int numOfRecords = censusAnalyser.loadUSCensusData(US_CENSUS_DATA_PATH);
+            Assert.assertEquals(5, numOfRecords);
+        } catch (CensusAnalyserException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -9,6 +9,9 @@ public class CSVStateCensusDao {
     public String StateCode;
     public String SrNo;
     public String TIN;
+    public String USState;
+    public int USAreaInSqKm;
+    public int USPopulation;
 
 
     public CSVStateCensusDao(CSVStateCensus csvStateCensus) {
@@ -25,4 +28,11 @@ public class CSVStateCensusDao {
         SrNo = csvStatesCode.SrNo;
         TIN = csvStatesCode.TIN;
     }
+    public CSVStateCensusDao(CsvUSData csvUSData) {
+      USState = csvUSData.USState;
+      USAreaInSqKm = csvUSData.USAreaInSqKm;
+      USPopulation = csvUSData.USPopulation;
+
+    }
+
 }
