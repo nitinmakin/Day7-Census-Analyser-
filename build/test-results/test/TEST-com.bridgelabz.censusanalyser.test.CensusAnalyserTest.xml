@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-10T17:44:55" hostname="DESKTOP-96O27FC" time="0.383">
+<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-10T22:46:46" hostname="DESKTOP-96O27FC" time="0.283">
   <properties/>
-  <testcase name="givenUSCensusData_WhenSortedOnArea_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.383"/>
-  <system-out><![CDATA[CsvUSData{State='Alaska', Population='710231', area='1477954.35', Population_Density='0.46'}
+  <testcase name="givenIndianCensusData_WhenSortedOnPopulation_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.283"/>
+  <system-out><![CDATA[IndiaCensusCSV{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
