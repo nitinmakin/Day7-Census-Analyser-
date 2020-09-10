@@ -12,6 +12,7 @@ public class CSVStateCensusDao {
     public double area;
     public double populationDensity;
     public long Population;
+    public double Population_Density;
 
     public CSVStateCensusDao(CSVStateCensus csvStateCensus) {
         State = csvStateCensus.State;
@@ -27,11 +28,12 @@ public class CSVStateCensusDao {
         SrNo = csvStatesCode.SrNo;
         TIN = csvStatesCode.TIN;
     }
+
     public CSVStateCensusDao(CsvUSData csvUSData) {
-      State = csvUSData.State;
-      Population = csvUSData.Population;
-      area = csvUSData.area;
-      populationDensity = csvUSData.Population_Density;
+        State = csvUSData.State;
+        Population = csvUSData.Population;
+        area = csvUSData.area;
+        Population_Density = csvUSData.Population_Density;
 
     }
 

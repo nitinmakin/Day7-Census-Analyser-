@@ -138,6 +138,23 @@ public class StateCensusAnalyser {
         return new Gson().toJson(sortedResult);
     }
 
+    public String getUSPopulationDensitySortedCensusDataInDescending() throws CensusAnalyserException {
+        if (censusMap == null || censusMap.size() == 0) {
+            throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+        }
+        Comparator<CSVStateCensusDao> censusComparator = Comparator.comparing(census -> census.Population_Density);
+        List sortedResult = this.sort(censusComparator.reversed());
+        return new Gson().toJson(sortedResult);
+    }
+    public String getUSAreaSortedCensusDataInDescending() throws CensusAnalyserException {
+        if (censusMap == null || censusMap.size() == 0) {
+            throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+        }
+        Comparator<CSVStateCensusDao> censusComparator = Comparator.comparing(census -> census.area);
+        List sortedResult = this.sort(censusComparator.reversed());
+        return new Gson().toJson(sortedResult);
+    }
+
 
     private List sort(Comparator<CSVStateCensusDao> censusComparator) {
         List sortedResult = censusMap.values().stream().sorted(censusComparator).collect(Collectors.toList());
