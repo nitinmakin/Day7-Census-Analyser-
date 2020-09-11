@@ -28,7 +28,6 @@ public class CensusAnalyserTest {
             e.printStackTrace();
         }
     }
-
     @Test
     public void givenIndiaCensusData_WithWrongFile_ShouldThrowException() {
         try {
@@ -170,6 +169,7 @@ public class CensusAnalyserTest {
         try {
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             censusAnalyser.loadIndiaStateCodeCsv(INDIA_CENSUS_CSV_FILE_PATH_FOR_STATE_CODE);
+
             String SortedCensusData = censusAnalyser.getStateCodeSortedCensusData();
             CSVStatesCode censusCsv[] = new Gson().fromJson(SortedCensusData, CSVStatesCode[].class);
             Assert.assertEquals("Andhra Pradesh", censusCsv[0].StateName);

@@ -1,6 +1,6 @@
 package com.bridgelabz.censusanalyser.model;
 
-public class CSVStateCensusDao {
+public class CSVStateCensusDao  {
     public String State;
     public long areaInSqKm;
     public long densityPerSqKm;
