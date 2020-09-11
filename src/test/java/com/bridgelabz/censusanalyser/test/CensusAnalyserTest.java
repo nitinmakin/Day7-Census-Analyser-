@@ -25,7 +25,6 @@ public class CensusAnalyserTest {
             int numOfRecords = censusAnalyser.loadIndianStateCsvData(INDIA_CENSUS_CSV_FILE_PATH);
             Assert.assertEquals(29, numOfRecords);
         } catch (CensusAnalyserException e) {
-            e.printStackTrace();
         }
     }
     @Test
@@ -226,7 +225,6 @@ public class CensusAnalyserTest {
             int numOfRecords = censusAnalyser.loadUSCensusData(US_CENSUS_DATA_PATH);
             Assert.assertEquals(51, numOfRecords);
         } catch (CensusAnalyserException e) {
-            e.printStackTrace();
         }
     }
 
