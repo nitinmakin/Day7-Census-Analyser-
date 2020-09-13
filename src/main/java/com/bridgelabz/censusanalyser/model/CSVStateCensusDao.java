@@ -10,13 +10,11 @@ public class CSVStateCensusDao  {
     public long SrNo;
     public long TIN;
     public double area;
-    public double populationDensity;
     public long Population;
     public double Population_Density;
 
     public CSVStateCensusDao(CSVStateCensus csvStateCensus) {
         State = csvStateCensus.State;
-        areaInSqKm = csvStateCensus.areaInSqKm;
         densityPerSqKm = csvStateCensus.densityPerSqKm;
         population = csvStateCensus.population;
 

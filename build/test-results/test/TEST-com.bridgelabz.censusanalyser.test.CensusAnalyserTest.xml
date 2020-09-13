@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-09-11T22:26:14" hostname="DESKTOP-96O27FC" time="0.603">
+<testsuite name="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-09-13T16:23:31" hostname="DESKTOP-96O27FC" time="1.122">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.227"/>
-  <testcase name="givenUSCensusData_WhenSortedOnPopulation_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.014"/>
-  <testcase name="givenUSCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.002"/>
-  <testcase name="givenIndiaCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.009"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnStateCode_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.002"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnPopulation_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.156"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnStateArea_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.051"/>
-  <testcase name="givenUSCensusData_WhenSortedOnPopulationDensity_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.341"/>
+  <testcase name="givenUSCensusData_WhenSortedOnPopulation_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.208"/>
+  <testcase name="givenUSCensusCSVFileReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.069"/>
+  <testcase name="givenIndiaCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.021"/>
+  <testcase name="givenIndianCensusData_WhenSortedOnStateCode_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.074"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongDelimiter_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianCensusData_WhenSortedOnPopulation_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.029"/>
+  <testcase name="givenIndianCensusData_WhenSortedOnStateArea_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.042"/>
+  <testcase name="givenUSCensusData_WhenSortedOnPopulationDensity_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.075"/>
   <testcase name="givenIndiaCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenUSCensusData_WhenSortedOnState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenUSCensusData_WhenSortedOnArea_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.0"/>
-  <testcase name="givenIndiaCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnPopulationDensity_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.066"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.046"/>
-  <testcase name="givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.002"/>
-  <testcase name="givenIndianStateCodeCensusCSVFileShouldReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.004"/>
-  <system-out><![CDATA[IndiaCensusCSV{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
-IndiaCensusCSV{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
-IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
-IndiaCensusCSV{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
+  <testcase name="givenUSCensusData_WhenSortedOnState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.051"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongFileType_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.002"/>
+  <testcase name="givenUSCensusData_WhenSortedOnArea_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.061"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndiaCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.003"/>
+  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.003"/>
+  <testcase name="givenIndianCensusData_WhenSortedOnPopulationDensity_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.028"/>
+  <testcase name="givenIndianCensusData_WhenSortedOnState_ShouldReturnSortResult" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.029"/>
+  <testcase name="givenIndiaStateCodeCensusData_WithWrongHeader_ShouldThrowException" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianStateCodeCensusCSVFileShouldReturnsCorrectRecords" classname="com.bridgelabz.censusanalyser.test.CensusAnalyserTest" time="0.057"/>
+  <system-out><![CDATA[CsvUSData{State='California', Population='37253956', area='403466.62', Population_Density='92.32'}
+CSVStatesCode{stateName='Andhra Pradesh', stateCode='AD', SrNo='3', TIN='37'}
+IndiaCensusCSV{State='Uttar Pradesh', Population='199812341', AreaInSqKm='0', DensityPerSqKm='828'}
+IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='0', DensityPerSqKm='1102'}
+CsvUSData{State='District of Columbia', Population='601723', area='158.12', Population_Density='3805.61'}
+CsvUSData{State='North Carolina', Population='9535483', area='125919.9', Population_Density='75.71'}
+IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='0', DensityPerSqKm='1102'}
+IndiaCensusCSV{State='Andhra Pradesh', Population='49386799', AreaInSqKm='0', DensityPerSqKm='303'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -9,7 +9,6 @@ public class CSVStateCensus {
     @CsvBindByName(column = "Population", required = true)
     public long population;
 
-
     @CsvBindByName(column = "AreaInSqKm", required = true)
     public long areaInSqKm;
 
