@@ -12,7 +12,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StateCensusAnalyser {
-    ComparatorSort container;
 
     public enum Country {
         INDIA, US, INDIAN_STATE_CODE
@@ -32,29 +31,28 @@ public class StateCensusAnalyser {
      * @throws CensusAnalyserException
      */
     public int loadStateCsvData(Country country, String csvFilePath) throws CensusAnalyserException {
-        censusMap = new CensusLoader().loadCsvData(country, csvFilePath);
+        censusMap = new IndianCensusAdaptor().loadCsvData(country, csvFilePath);
         return censusMap.size();
     }
 
-    public String getStateSortedCensusData(EnumSorting variableName) throws CensusAnalyserException {
+    /**
+     *  sorting census data
+     *
+     * @param
+     * @return
+     * @throws CensusAnalyserException
+     */
+
+    public String getStateSortedCensusData(EnumSorting enumSorting) throws CensusAnalyserException {
         if (censusMap == null || censusMap.size() == 0) {
             throw new CensusAnalyserException("NO Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
-        Comparator<CSVStateCensusDao> censusComparator = container.sortData(variableName) ;
-        List sortedResult = this.sort(censusComparator);
+        ComparatorSort comparatorSort = new ComparatorSort();
+        Comparator<CSVStateCensusDao> censusComparator = comparatorSort.sortData(enumSorting);
+        List sortedResult = censusMap.values().stream().sorted(censusComparator).collect(Collectors.toList());
         return new Gson().toJson(sortedResult);
     }
 
-    /**
-     * sorting method
-     *
-     * @param censusComparator
-     * @return
-     */
-    private List sort(Comparator<CSVStateCensusDao> censusComparator) {
-        List sortedResult = censusMap.values().stream().sorted(censusComparator).collect(Collectors.toList());
-        return sortedResult;
-    }
 }
 
 

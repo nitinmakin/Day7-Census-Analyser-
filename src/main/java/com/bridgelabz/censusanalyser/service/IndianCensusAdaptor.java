@@ -16,8 +16,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.StreamSupport;
 
-public class CensusLoader {
-
+public class IndianCensusAdaptor extends CsvLoader {
+    @Override
+    public Map<String, CSVStateCensusDao> loadCsvData(String csvFilePath) throws CensusAnalyserException {
+        return null;
+    }
     public Map<String, CSVStateCensusDao> loadCsvData(StateCensusAnalyser.Country country, String csvFilePath) throws CensusAnalyserException {
         if (country.equals(StateCensusAnalyser.Country.INDIA))
             return this.loadCsvData(CSVStateCensus.class, csvFilePath);
@@ -61,5 +64,6 @@ public class CensusLoader {
         }
         return null;
     }
+
 
 }

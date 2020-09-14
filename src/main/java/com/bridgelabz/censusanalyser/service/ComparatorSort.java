@@ -39,7 +39,7 @@ public class ComparatorSort {
         return sortField;
     }
 
-    public Comparator<CSVStateCensusDao> sortData(EnumSorting enumSorting) {
+    public  Comparator<CSVStateCensusDao> sortData(EnumSorting enumSorting) {
         return getSortedData(enumSorting);
     }
 
