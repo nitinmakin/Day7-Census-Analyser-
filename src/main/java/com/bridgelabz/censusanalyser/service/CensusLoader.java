@@ -18,8 +18,20 @@ import java.util.stream.StreamSupport;
 
 public class CensusLoader {
 
-    public <E> Map loadCsvData( Class<E> censusCsvData, String... csvFilePath) throws CensusAnalyserException {
-        Map<String, CSVStateCensusDao>  censusMap = new HashMap<>();
+    public Map<String, CSVStateCensusDao> loadCsvData(StateCensusAnalyser.Country country, String csvFilePath) throws CensusAnalyserException {
+        if (country.equals(StateCensusAnalyser.Country.INDIA))
+            return this.loadCsvData(CSVStateCensus.class, csvFilePath);
+        else if (country.equals(StateCensusAnalyser.Country.US))
+            return this.loadCsvData(CsvUSData.class, csvFilePath);
+        else if (country.equals(StateCensusAnalyser.Country.INDIAN_STATE_CODE))
+            return this.loadCsvData(CSVStatesCode.class, csvFilePath);
+        else
+            throw new CensusAnalyserException("incorrect country", CensusAnalyserException.ExceptionType.INVALID_COUNTRY);
+
+    }
+
+    private <E> Map loadCsvData(Class<E> censusCsvData, String... csvFilePath) throws CensusAnalyserException {
+        Map<String, CSVStateCensusDao> censusMap = new HashMap<>();
 
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath[0]))) {
             ICsvBuilder csvBuilder = CsvBuilderFactory.createCsvBuilder();
@@ -49,4 +61,5 @@ public class CensusLoader {
         }
         return null;
     }
+
 }

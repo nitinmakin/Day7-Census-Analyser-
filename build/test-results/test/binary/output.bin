@@ -1,9 +1,5 @@
-dCsvUSData{State='California', Population='37253956', area='403466.62', Population_Density='92.32'}
-OCSVStatesCode{stateName='Andhra Pradesh', stateCode='AD', SrNo='3', TIN='37'}
-eIndiaCensusCSV{State='Uttar Pradesh', Population='199812341', AreaInSqKm='0', DensityPerSqKm='828'}
-	^IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='0', DensityPerSqKm='1102'}
+eIndiaCensusCSV{State='Uttar Pradesh', Population='199812341', AreaInSqKm='0', DensityPerSqKm='828'}
+^IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='0', DensityPerSqKm='1102'}
 
-kCsvUSData{State='District of Columbia', Population='601723', area='158.12', Population_Density='3805.61'}
-fCsvUSData{State='North Carolina', Population='9535483', area='125919.9', Population_Density='75.71'}
-^IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='0', DensityPerSqKm='1102'}
-eIndiaCensusCSV{State='Andhra Pradesh', Population='49386799', AreaInSqKm='0', DensityPerSqKm='303'}
+^IndiaCensusCSV{State='Bihar', Population='103804637', AreaInSqKm='0', DensityPerSqKm='1102'}
+eIndiaCensusCSV{State='Andhra Pradesh', Population='49386799', AreaInSqKm='0', DensityPerSqKm='303'}

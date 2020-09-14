@@ -16,6 +16,12 @@ import java.util.stream.Collectors;
 
 public class StateCensusAnalyser {
 
+    private Object Country;
+
+    public enum Country{
+        INDIA, US, INDIAN_STATE_CODE
+    }
+
     Map<String, CSVStateCensusDao> censusMap;
 
     public StateCensusAnalyser() {
@@ -23,40 +29,17 @@ public class StateCensusAnalyser {
     }
 
     /**
-     * to load india state census data
+     * to load all state census data
      *
      * @param csvFilePath
      * @return
      * @throws CensusAnalyserException
      */
-    public int loadIndianStateCsvData(String csvFilePath) throws CensusAnalyserException {
-        censusMap = new CensusLoader().loadCsvData(CSVStateCensus.class, csvFilePath);
+    public int loadStateCsvData(Country country, String csvFilePath) throws CensusAnalyserException {
+        censusMap = new CensusLoader().loadCsvData(country, csvFilePath);
         return censusMap.size();
     }
 
-    /**
-     * to load indian state code census data
-     *
-     * @param csvFilePath
-     * @return
-     * @throws CensusAnalyserException
-     */
-    public int loadUSCensusData(String csvFilePath) throws CensusAnalyserException {
-        censusMap = new CensusLoader().loadCsvData(CsvUSData.class, csvFilePath);
-        return censusMap.size();
-    }
-
-    /**
-     * to load US census data
-     *
-     * @param csvFilePath
-     * @return
-     * @throws CensusAnalyserException
-     */
-    public int loadIndiaStateCodeCsv(String csvFilePath) throws CensusAnalyserException {
-        censusMap = new CensusLoader().loadCsvData(CSVStatesCode.class, csvFilePath);
-        return censusMap.size();
-    }
 
     /**
      * for sorting census data in ascending order
